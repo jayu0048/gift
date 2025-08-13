@@ -9,7 +9,7 @@
   const myAudio = [$('myAudio1'),$('myAudio2')]
   var randomSelection = Math.floor(Math.random() * (myAudio.length)); 
   openB.addEventListener('click', function () {
-    var password = prompt("Please enter password", "Anniversary, 4 digits");
+    var password = prompt("Please enter password",);
     if (password == '120804') {
       myAudio[randomSelection].play();
       if (randomSelection ==0){myAudio[randomSelection+1].style.display="none";}
