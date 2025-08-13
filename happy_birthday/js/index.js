@@ -1,19 +1,19 @@
-(function() {
+(function () {
   function $(id) {
     return document.getElementById(id);
   }
   var card = $('card'),
-      openB = $('open'),
-      closeB = $('close'),
-      timer = null;            
-  const myAudio = [$('myAudio1'),$('myAudio2')]
-  var randomSelection = Math.floor(Math.random() * (myAudio.length)); 
+    openB = $('open'),
+    closeB = $('close'),
+    timer = null;
+  const myAudio = [$('myAudio1'), $('myAudio2')]
+  var randomSelection = Math.floor(Math.random() * (myAudio.length));
   openB.addEventListener('click', function () {
     var password = prompt("Please enter password",);
     if (password == '120804') {
       myAudio[randomSelection].play();
-      if (randomSelection ==0){myAudio[randomSelection+1].style.display="none";}
-      else{myAudio[randomSelection-1].style.display="none";}
+      if (randomSelection == 0) { myAudio[randomSelection + 1].style.display = "none"; }
+      else { myAudio[randomSelection - 1].style.display = "none"; }
       card.setAttribute('class', 'open-half');
       if (timer) clearTimeout(timer);
       timer = setTimeout(function () {
